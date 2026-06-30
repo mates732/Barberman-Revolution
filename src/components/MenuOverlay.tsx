@@ -9,7 +9,7 @@ interface MenuOverlayProps {
  onClose: () => void
 }
 
-const ease = [0.43, 0.13, 0.23, 0.96]
+const ease = [0.43, 0.13, 0.23, 0.96] as const
 
 const itemVariants = {
   hidden: { opacity: 0 },

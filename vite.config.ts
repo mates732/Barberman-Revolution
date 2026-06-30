@@ -1,14 +1,20 @@
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig, loadEnv, type UserConfig, type ConfigEnv } from 'vite'
+import type { PluginOption } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
-export default defineConfig(async ({ mode }) => {
-  const plugins = [react(), tailwindcss()];
+const config = async ({ mode }: ConfigEnv): Promise<UserConfig> => {
+  const plugins: PluginOption[] = [react(), tailwindcss()];
   try {
     // @ts-expect-error — optional source tags plugin
     const m = await import('./.vite-source-tags.js');
-    plugins.push(m.sourceTags());
+    const tags = m.sourceTags();
+    if (Array.isArray(tags)) {
+      plugins.push(...tags);
+    } else {
+      plugins.push(tags);
+    }
   } catch { /* not available */ }
 
   const env = loadEnv(mode, process.cwd(), ['VITE_', 'NEXT_PUBLIC_']);
@@ -26,4 +32,6 @@ export default defineConfig(async ({ mode }) => {
       allowedHosts: true,
     },
   };
-})
+};
+
+export default defineConfig(config);
