@@ -187,7 +187,7 @@ export default function CircularCarousel({
     }
   }, [isHovered, isDragging, goNext, prefersReducedMotion, single, empty])
 
-  const NAV_GAP = 12
+  const NAV_GAP = containerWidth >= 768 ? 12 : 0
 
   const getImgWidth = useCallback(
     (idx: number) => {
