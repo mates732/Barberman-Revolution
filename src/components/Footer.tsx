@@ -3,7 +3,7 @@ import { BOOKING_URL, contact } from '../lib/data'
 export default function Footer() {
   const isApple = /iPhone|iPad|iPod/.test(navigator.userAgent)
   const addressHref = isApple
-    ? 'https://maps.apple.com/?q=Svatopluka%20%C4%8Cecha%20275/1,%20434%2001%20Most%201'
+    ? 'https://maps.apple.com/?ll=50.511176,13.6474141&q=Barberman%20Revolution'
     : 'https://www.google.com/maps/place/Barberman+Revolution/@50.5111803,13.6475693,20.41z/data=!4m6!3m5!1s0x470a21189498e821:0x1a96e58c5b7ecd8a!8m2!3d50.511176!4d13.6474141!16s%2Fg%2F11rqxtj2tf'
 
   return (
