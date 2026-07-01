@@ -103,7 +103,7 @@ export const contact = {
  city: '434 01 Most',
  phone: '+420 777 123 456',
  email: 'rezervace@barberman.cz',
- instagram: '@barberman.revolution',
+ instagram: '@barbermanrevolution',
  mapQuery: 'Budovatelů 2850, Most, Czech Republic',
 }
 
