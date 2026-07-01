@@ -10,8 +10,8 @@ export default function Contact() {
   const ua = navigator.userAgent
   const isApple = /iPhone|iPad|iPod/.test(ua) || (/Mac/.test(ua) && /Safari/.test(ua) && !/Chrome/.test(ua))
   const addressHref = isApple
-    ? 'https://maps.apple.com/?q=Svatopluka%20%C4%8Cecha%20275/1,%20434%2001%20Most%201'
-    : 'https://www.google.com/maps/search/?api=1&query=GJ6W%2BFX+Most'
+    ? 'https://maps.apple.com/?q=Svatopluka%20%C4%8Cecha%20275%2F1%2C%20434%2001%20Most%201%2C%20Czechia'
+    : 'https://www.google.com/maps/search/?api=1&query=Svatopluka%20%C4%8Cecha%20275%2F1%2C%20434%2001%20Most%201%2C%20Czechia'
 
   return (
  <SectionTransition id="kontakt" className={`relative ${SECTION_PADDING_Y}`} snap>
