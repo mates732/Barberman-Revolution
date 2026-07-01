@@ -32,7 +32,7 @@ export default function Contact() {
  <MapPin className="mt-0.5 h-5 w-5 flex-none text-gold-400" />
         <div>
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Budovatelů+2850,+434+01+Most"
+            href="https://www.google.com/maps/search/?api=1&query=Svatopluka+Čecha+275/1,+434+01+Most+1"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gold-300"

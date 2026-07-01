@@ -99,12 +99,12 @@ export const BOOKING_URL =
  'https://barberman.snippet.myfox.cz/form/show/date_2023-05-12/shopId_clafq42pjxhas07837jorotvq/lng_cs'
 
 export const contact = {
- address: 'Budovatelů 2850',
- city: '434 01 Most',
+  address: 'Svatopluka Čecha 275/1',
+  city: '434 01 Most 1',
  phone: '+420 777 123 456',
  email: 'rezervace@barberman.cz',
  instagram: '@barbermanrevolution',
- mapQuery: 'Budovatelů 2850, Most, Czech Republic',
+  mapQuery: 'Svatopluka Čecha 275/1, Most, Czech Republic',
 }
 
 export const navLinks = [

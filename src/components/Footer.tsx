@@ -6,7 +6,7 @@ export default function Footer() {
  <div className="mx-auto max-w-3xl px-5 text-center sm:px-8">
   {/* Info */}
  <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-supporting">
-  <a href="https://www.google.com/maps/search/?api=1&query=Budovatelů+2850,+434+01+Most" target="_blank" rel="noopener noreferrer" className="hover:text-gold-300" aria-label="Otevřít adresu v mapách">{contact.address}, {contact.city}</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Svatopluka+Čecha+275/1,+434+01+Most+1" target="_blank" rel="noopener noreferrer" className="hover:text-gold-300" aria-label="Otevřít adresu v mapách">{contact.address}, {contact.city}</a>
  <span className="hidden sm:inline text-decorative">·</span>
   <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="hover:text-gold-300" aria-label={`Zavolat na ${contact.phone}`}>
   {contact.phone}
