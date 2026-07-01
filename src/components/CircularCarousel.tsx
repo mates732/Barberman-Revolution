@@ -187,8 +187,6 @@ export default function CircularCarousel({
     }
   }, [isHovered, isDragging, goNext, prefersReducedMotion, single, empty])
 
-  const NAV_GAP = containerWidth >= 768 ? 12 : 0
-
   const getImgWidth = useCallback(
     (idx: number) => {
       const a = loadedAspects[idx]
@@ -325,28 +323,6 @@ export default function CircularCarousel({
         })()}
       </div>
 
-      {total > 1 && showNav && (
-        <>
-          <MorphingArrowButton
-            direction="prev"
-            onClick={(e) => {
-              e.stopPropagation()
-              goPrev()
-            }}
-            label="Předchozí obrázek"
-            style={{ left: NAV_GAP }}
-          />
-          <MorphingArrowButton
-            direction="next"
-            onClick={(e) => {
-              e.stopPropagation()
-              goNext()
-            }}
-            label="Další obrázek"
-            style={{ right: NAV_GAP }}
-          />
-        </>
-      )}
     </div>
   )
 
@@ -355,8 +331,30 @@ export default function CircularCarousel({
       {fullWidth ? (
         carousel
       ) : (
-        <div className={`mx-auto max-w-7xl ${containerPadding}`}>
+        <div className={`mx-auto max-w-7xl relative ${containerPadding}`}>
           {carousel}
+          {total > 1 && showNav && (
+            <>
+              <MorphingArrowButton
+                direction="prev"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  goPrev()
+                }}
+                label="Předchozí obrázek"
+                style={{ left: containerWidth < 768 ? 12 : 44 }}
+              />
+              <MorphingArrowButton
+                direction="next"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  goNext()
+                }}
+                label="Další obrázek"
+                style={{ right: containerWidth < 768 ? 12 : 44 }}
+              />
+            </>
+          )}
           {showDots && (
             <div className="flex items-center justify-center gap-3 mt-6">
               {images.map((_, i) => (
