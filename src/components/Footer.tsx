@@ -1,12 +1,18 @@
 import { BOOKING_URL, contact } from '../lib/data'
 
 export default function Footer() {
- return (
+  const ua = navigator.userAgent
+  const isApple = /iPhone|iPad|iPod/.test(ua) || (/Mac/.test(ua) && /Safari/.test(ua) && !/Chrome/.test(ua))
+  const addressHref = isApple
+    ? 'https://maps.apple.com/?q=Svatopluka%20%C4%8Cecha%20275/1,%20434%2001%20Most%201'
+    : 'https://www.google.com/maps/search/?api=1&query=GJ6W%2BFX+Most'
+
+  return (
  <footer className="py-16 sm:py-20">
  <div className="mx-auto max-w-3xl px-5 text-center sm:px-8">
   {/* Info */}
  <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-supporting">
-  <a href="https://www.google.com/maps/search/?api=1&query=Svatopluka+Čecha+275/1,+434+01+Most+1" target="_blank" rel="noopener noreferrer" className="hover:text-gold-300" aria-label="Otevřít adresu v mapách">{contact.address}, {contact.city}</a>
+   <a href={addressHref} target="_blank" rel="noopener noreferrer" className="hover:text-gold-300" aria-label="Otevřít adresu v mapách">{contact.address}, {contact.city}</a>
  <span className="hidden sm:inline text-decorative">·</span>
   <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="hover:text-gold-300" aria-label={`Zavolat na ${contact.phone}`}>
   {contact.phone}

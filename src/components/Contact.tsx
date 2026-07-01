@@ -6,9 +6,14 @@ import { contact, openingHours } from '../lib/data'
 import { SECTION_PADDING_Y } from '../foundation/tokens/spacing'
 
 export default function Contact() {
- const todayIdx = (new Date().getDay() + 6) % 7
+  const todayIdx = (new Date().getDay() + 6) % 7
+  const ua = navigator.userAgent
+  const isApple = /iPhone|iPad|iPod/.test(ua) || (/Mac/.test(ua) && /Safari/.test(ua) && !/Chrome/.test(ua))
+  const addressHref = isApple
+    ? 'https://maps.apple.com/?q=Svatopluka%20%C4%8Cecha%20275/1,%20434%2001%20Most%201'
+    : 'https://www.google.com/maps/search/?api=1&query=GJ6W%2BFX+Most'
 
- return (
+  return (
  <SectionTransition id="kontakt" className={`relative ${SECTION_PADDING_Y}`} snap>
  <div className="mx-auto max-w-7xl px-5 sm:px-8">
  <div className="mx-auto mb-12 max-w-2xl text-center">
@@ -32,7 +37,7 @@ export default function Contact() {
  <MapPin className="mt-0.5 h-5 w-5 flex-none text-gold-400" />
         <div>
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Svatopluka+Čecha+275/1,+434+01+Most+1"
+            href={addressHref}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gold-300"
