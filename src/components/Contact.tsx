@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Instagram, Clock, Car } from 'lucide-react'
+import { MapPin, Phone, Instagram, Clock, Car } from 'lucide-react'
 import Reveal from './Reveal'
 import SectionTransition from './SectionTransition'
 import SectionHeading from './SectionHeading'
@@ -66,18 +66,8 @@ export default function Contact() {
   <Phone className="h-5 w-5 flex-none text-gold-400" />
   {contact.phone}
   </a>
- </li>
- <li>
-  <a
-  href={`mailto:${contact.email}`}
-  className="flex items-center gap-3 text-body hover:text-gold-300"
-  aria-label={`Poslat e-mail na ${contact.email}`}
-  >
-  <Mail className="h-5 w-5 flex-none text-gold-400" />
-  {contact.email}
-  </a>
- </li>
- <li>
+  </li>
+  <li>
   <a
           href={`https://www.instagram.com/${contact.instagram.replace('@', '')}/`}
   target="_blank"

@@ -102,8 +102,7 @@ export const contact = {
   address: 'Svatopluka Čecha 275/1',
   city: '434 01 Most 1',
   phone: '+420 773 719 399',
- email: 'rezervace@barberman.cz',
- instagram: '@barbermanrevolution',
+  instagram: '@barbermanrevolution',
   mapQuery: 'Svatopluka Čecha 275/1, Most, Czech Republic',
 }
 
