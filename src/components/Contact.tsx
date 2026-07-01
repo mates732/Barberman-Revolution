@@ -30,10 +30,18 @@ export default function Contact() {
  </h3>
  <div className="mt-4 flex items-start gap-3 text-body">
  <MapPin className="mt-0.5 h-5 w-5 flex-none text-gold-400" />
- <div>
- <div>{contact.address}</div>
- <div>{contact.city}</div>
- </div>
+        <div>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Budovatelů+2850,+434+01+Most"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gold-300"
+            aria-label="Otevřít adresu v mapách"
+          >
+            <div>{contact.address}</div>
+            <div>{contact.city}</div>
+          </a>
+        </div>
  </div>
 
  <div className="mt-4 flex items-start gap-3 text-body">
@@ -46,33 +54,36 @@ export default function Contact() {
  </h3>
  <ul className="mt-4 space-y-3 text-body">
  <li>
- <a
- href={`tel:${contact.phone.replace(/\s/g, '')}`}
- className="flex items-center gap-3 text-body hover:text-gold-300"
- >
- <Phone className="h-5 w-5 flex-none text-gold-400" />
- {contact.phone}
- </a>
+  <a
+  href={`tel:${contact.phone.replace(/\s/g, '')}`}
+  className="flex items-center gap-3 text-body hover:text-gold-300"
+  aria-label={`Zavolat na ${contact.phone}`}
+  >
+  <Phone className="h-5 w-5 flex-none text-gold-400" />
+  {contact.phone}
+  </a>
  </li>
  <li>
- <a
- href={`mailto:${contact.email}`}
- className="flex items-center gap-3 text-body hover:text-gold-300"
- >
- <Mail className="h-5 w-5 flex-none text-gold-400" />
- {contact.email}
- </a>
+  <a
+  href={`mailto:${contact.email}`}
+  className="flex items-center gap-3 text-body hover:text-gold-300"
+  aria-label={`Poslat e-mail na ${contact.email}`}
+  >
+  <Mail className="h-5 w-5 flex-none text-gold-400" />
+  {contact.email}
+  </a>
  </li>
  <li>
- <a
- href={`https://instagram.com/${contact.instagram.replace('@', '')}`}
- target="_blank"
- rel="noopener noreferrer"
- className="flex items-center gap-3 text-body hover:text-gold-300"
- >
- <Instagram className="h-5 w-5 flex-none text-gold-400" />
- {contact.instagram}
- </a>
+  <a
+          href={`https://www.instagram.com/${contact.instagram.replace('@', '')}/`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-3 text-body hover:text-gold-300"
+  aria-label={`Instagram ${contact.instagram}`}
+  >
+  <Instagram className="h-5 w-5 flex-none text-gold-400" />
+  {contact.instagram}
+  </a>
  </li>
  </ul>
 
