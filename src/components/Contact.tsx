@@ -7,11 +7,10 @@ import { SECTION_PADDING_Y } from '../foundation/tokens/spacing'
 
 export default function Contact() {
   const todayIdx = (new Date().getDay() + 6) % 7
-  const ua = navigator.userAgent
-  const isApple = /iPhone|iPad|iPod/.test(ua) || (/Mac/.test(ua) && /Safari/.test(ua) && !/Chrome/.test(ua))
+  const isApple = /iPhone|iPad|iPod/.test(navigator.userAgent)
   const addressHref = isApple
-    ? 'https://maps.apple.com/?q=Svatopluka%20%C4%8Cecha%20275%2F1%2C%20434%2001%20Most%201%2C%20Czechia'
-    : 'https://www.google.com/maps/search/?api=1&query=Svatopluka%20%C4%8Cecha%20275%2F1%2C%20434%2001%20Most%201%2C%20Czechia'
+    ? 'https://maps.apple.com/?q=Svatopluka%20%C4%8Cecha%20275/1,%20434%2001%20Most%201'
+    : 'https://www.google.com/maps/place/Barberman+Revolution/@50.5111803,13.6475693,20.41z/data=!4m6!3m5!1s0x470a21189498e821:0x1a96e58c5b7ecd8a!8m2!3d50.511176!4d13.6474141!16s%2Fg%2F11rqxtj2tf'
 
   return (
  <SectionTransition id="kontakt" className={`relative ${SECTION_PADDING_Y}`} snap>
