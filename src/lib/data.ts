@@ -86,13 +86,13 @@ export const reviews: Review[] = [
 ]
 
 export const openingHours = [
- { day: 'Pondělí', hours: 'Zavřeno' },
- { day: 'Úterý', hours: '9:00 – 19:00' },
- { day: 'Středa', hours: '9:00 – 19:00' },
- { day: 'Čtvrtek', hours: '9:00 – 20:00' },
- { day: 'Pátek', hours: '9:00 – 20:00' },
- { day: 'Sobota', hours: '8:00 – 16:00' },
- { day: 'Neděle', hours: 'Zavřeno' },
+  { day: 'Pondělí', hours: '9:00 – 12:00, 14:00 – 19:00' },
+  { day: 'Úterý', hours: '9:00 – 12:00, 14:00 – 19:00' },
+  { day: 'Středa', hours: '9:00 – 12:00, 14:00 – 19:00' },
+  { day: 'Čtvrtek', hours: '9:00 – 12:00, 14:00 – 19:00' },
+  { day: 'Pátek', hours: '9:00 – 12:00, 14:00 – 19:00' },
+  { day: 'Sobota', hours: 'Dle telefonické domluvy' },
+  { day: 'Neděle', hours: 'Zavřeno' },
 ]
 
 export const BOOKING_URL =
@@ -101,7 +101,7 @@ export const BOOKING_URL =
 export const contact = {
   address: 'Svatopluka Čecha 275/1',
   city: '434 01 Most 1',
- phone: '+420 777 123 456',
+  phone: '+420 773 719 399',
  email: 'rezervace@barberman.cz',
  instagram: '@barbermanrevolution',
   mapQuery: 'Svatopluka Čecha 275/1, Most, Czech Republic',
