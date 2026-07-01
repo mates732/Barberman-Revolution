@@ -342,7 +342,7 @@ export default function CircularCarousel({
                   goPrev()
                 }}
                 label="Předchozí obrázek"
-                style={{ left: containerWidth < 768 ? 12 : 44 }}
+                style={{ left: containerWidth < 768 ? -13 : 44 }}
               />
               <MorphingArrowButton
                 direction="next"
@@ -351,7 +351,7 @@ export default function CircularCarousel({
                   goNext()
                 }}
                 label="Další obrázek"
-                style={{ right: containerWidth < 768 ? 12 : 44 }}
+                style={{ right: containerWidth < 768 ? -13 : 44 }}
               />
             </>
           )}
